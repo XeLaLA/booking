@@ -8,6 +8,7 @@ import org.example.booking.mapper.BookingMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,6 +19,7 @@ public class CustomerService {
     private final CustomerDao customerDao;
     private final BookingMapper bookingMapper;
 
+    @Transactional
     public List<BookingDtoRs> getBookingsByEmail(String customerEmail) {
         return customerDao.findFirstByEmail(customerEmail)
                 .orElseThrow()
