@@ -40,9 +40,9 @@ public class InitializationBdService {
         roomDao.save(room);
         Booking booking1 = new Booking("333", LocalDate.of(2000, 1, 1),
                 LocalDate.of(2000, 1, 2),
-                room,
-                customer);
-        bookingDao.save(booking);
+                room1,
+                customer1);
+        bookingDao.save(booking1);
 
     }
 }
