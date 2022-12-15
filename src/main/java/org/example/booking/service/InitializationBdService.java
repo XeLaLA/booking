@@ -35,14 +35,13 @@ public class InitializationBdService {
 
 
         Customer customer1 = new Customer("Oleg", "555@gmail.com");
-        customerDao.save(customer);
+        customerDao.save(customer1);
         Room room1 = new Room("222", RoomLevel.ECONOM);
-        roomDao.save(room);
+        roomDao.save(room1);
         Booking booking1 = new Booking("333", LocalDate.of(2000, 1, 1),
                 LocalDate.of(2000, 1, 2),
                 room1,
                 customer1);
         bookingDao.save(booking1);
-
     }
 }
